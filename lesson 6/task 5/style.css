@@ -1,0 +1,23 @@
+.list{
+    margin: 100px auto;
+    width: 1000px;
+    border: 5px solid cornflowerblue;
+
+    counter-reset: numbers;
+}
+.list div{
+    position: relative;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    line-height: 30px;
+    padding: 10px 0 10px 30px;
+
+}
+
+.list div::before{
+    counter-increment: numbers;
+    content: counter(numbers) ')';
+    position: absolute;
+    top: 10px;
+    left: 9px;
+}
