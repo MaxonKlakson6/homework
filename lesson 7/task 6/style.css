@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import "squares.css";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.content{
+    position: relative;
+    margin: 500px auto;
+    width: 1500px;
+    background: linear-gradient(178.18deg, #FD749B -13.56%, #281AC8 158.3%);
+}
+
+.content::before{
+    content: url("images/above.png");
+    position: relative;
+    top: -42px;
+}
+
+.content::after{
+    content: url("images/below.png");
+    position: relative;
+    bottom: -35px;
+}
+
+.header{
+    position: relative;
+}
+
+.header::before{
+    content: url("images/square-above.png");
+    position: absolute;
+    left: 161px;
+    top: -47px;
+}
+
+.title{
+    width: 327px;
+    margin: 123px auto 73px auto;
+
+    text-align: center;
+    font-family: Poppins;
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 42px;
+}
+
+.hr{
+    margin: auto;
+    width: 50px;
+
+    border: 3px solid #fd739b;
+    border-radius: 5px;
+    background: #fd739b;
+}
+
+.text{
+    width: 542px;
+    margin: 45px auto;
+
+    text-align: center;
+    font-family: Poppins;
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 40px;
+    color: #fff;
+}
+
+.customers{
+    width: 1067px;
+    height: 389px;
+    margin: 0 auto 67px;
+    position: relative;
+}
+
+.customer-message{
+    z-index: 1;
+    background-image: url("images/Holder-Container.png");
+    background-repeat: no-repeat;
+    position: relative;
+    width: 440px;
+    right: -90px;
+    top: -15px;
+}
+
+.message-holder{
+    padding: 18px 0 18px 50px;
+}
+
+.customer-message__title{
+    margin-bottom: 5px;
+
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0px;
+    color: #333;
+}
+
+.customer-message__text{
+    margin-top: 7px;
+    font-family: Poppins;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #333;
+}
+
+.customer-message__text span{
+    font-family: Poppins;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #333;
+}
+
+.customer-message__bitcoin{
+    position: absolute;
+    right: 23px;
+    top: 20px;
+}
+.customers::after{
+    content: url("images/square-below.png");
+    position: absolute;
+    right: -91px;
+    bottom: -38px;
+}

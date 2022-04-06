@@ -1,0 +1,84 @@
+.square{
+    width: 84px;
+    height: 84px;
+    position: absolute;
+    background-color: #D8D8D8;
+    border-radius: 50%;
+}
+
+.square1{
+    bottom: 75px;
+}
+
+.square2{
+    width: 138px;
+    height: 138px;
+    left: 88px;
+    top: 80px;
+}
+
+.square3{
+    width: 45px;
+    height: 45px;
+    left: 240px;
+    top: 244px;
+}
+
+.square4{
+    width: 68px;
+    height: 68px;
+    left: 274px;
+    top: 98px;
+}
+
+.square5{
+    width: 58px;
+    height: 58px;
+    left: 347px;
+    top: 177px;
+}
+
+.square6{
+    left: 442px;
+    top: 218px;
+}
+
+.square7{
+    width: 65px;
+    height: 65px;
+    left: 472px;
+    top: 106px;
+}
+
+.square8{
+    right: 363px;
+    top: 148px;
+}
+
+.square9{
+    width: 45px;
+    height: 45px;
+    right: 276px;
+    top: 206px;
+}
+
+.square10{
+    right: 203px;
+    bottom: 0;
+}
+
+.square11{
+    right: 214px;
+    top: 80px;
+}
+
+.square12{
+    right: 100px;
+    top: 182px;
+}
+
+.square13{
+    right: 0;
+    top: 0;
+}
+
