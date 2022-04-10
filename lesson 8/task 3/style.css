@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Spectral+SC:wght@600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: aquamarine;
+}
+
+.container{
+    max-width: 600px;
+    margin: 100px auto;
+
+    background: #fff;
+    border-radius: 20px;
+}
+
+.form{
+    width: 385px;
+    margin: 0 auto;
+    padding: 129px 0 93px;
+}
+
+.registration{
+    border-bottom: 1px solid #BDBDBD;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 53px;
+}
+
+.form__title{
+    margin-bottom: 40px;
+
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 34px;
+    color: #424242;
+}
+
+input{
+    width: 91%;
+    margin-bottom: 24px;
+    padding: 16px 0 16px 32px;
+    border: 1px solid #BDBDBD;
+    border-radius: 83px;
+    outline: 0;
+
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+input::-webkit-input-placeholder{
+    color: #BDBDBD;
+}
+
+input:nth-child(8){
+    margin-bottom: 8px;
+}
+
+.password-description{
+    margin-bottom: 40px;
+
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #424242;
+}
+
+.register{
+    width: 295px;
+    height: 50px;
+    margin-bottom: 40px;
+    align-self: center;
+
+    cursor: pointer;
+    background: linear-gradient(102.48deg, #976464 -29.03%, #CFA5A5 97.75%);
+    border: 0;
+    border-radius: 49px;
+
+    font-family: Spectral SC;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff;
+}
+
+.account{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.is-have{
+    margin-right: 24px;
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #424242;
+}
+
+.sign-in{
+    width: 152px;
+    height: 50px;
+
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid #BDBDBD;
+    border-radius: 50px;
+
+    font-family: Spectral SC;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #BDBDBD;
+}
+
+.password-holder{
+    position: relative;
+}
+
+.view{
+    position: absolute;
+    width: 17px;
+    height: 13px;
+    right: 33px;
+    top: 19px;
+
+    cursor: pointer;
+    border: 0;
+    background-color: transparent;
+    background-repeat: no-repeat;
+}
+
+.on{
+    background-image: url("on.svg");
+}
+
+.off{
+    background-image: url("off.svg");
+}

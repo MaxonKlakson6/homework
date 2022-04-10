@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    max-width: 1604px;
+    height: 560px;
+    margin: 100px auto;
+    background-image: url("images/background.png");
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.flowers{
+    position: absolute;
+    top: -176px;
+    left: 20px;
+}
+
+.form__holder{
+    display: flex;
+    width: 808px;
+    top: 120px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
+}
+
+.form{
+    width: 50%;
+}
+
+.form__content{
+    display: flex;
+    justify-content: space-between;
+    max-width: 324px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.form__title{
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0.04em;
+    color: #371030;
+    margin: 31px 0 18px 0;
+}
+
+input{
+    width: 100%;
+    outline: 0;
+    border: 0;
+    border-bottom: 1px solid #371030;
+    padding-bottom: 10px;
+    margin-bottom: 21px;
+
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.04em;
+}
+
+input::-webkit-input-placeholder {
+    color: #371030;
+}
+
+input:nth-child(2){
+    width: calc(50% - 18px);
+}
+
+input:nth-child(3){
+    width: calc(50% - 18px);
+}
+
+input:nth-child(5){
+    margin-bottom: 23px;
+}
+
+button{
+    margin-bottom: 40px;
+    width: 100%;
+    height: 55px;
+    border: 0;
+    background-color: #FFB0BA;
+    border-radius: 100px;
+    box-shadow: 3px 3px 0 3px #DE8E98;
+
+    font-family: Montserrat;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    color: #9A3C48;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.image{
+    background-image: url("images/drawing.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0 15px 15px 0;
+    width: 50%;
+}
+

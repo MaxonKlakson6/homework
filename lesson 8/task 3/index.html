@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <form action="" class="form">
+            <div class="registration">
+                <h1 class="form__title">Регистрация</h1>
+                <input type="text" placeholder="Имя">
+                <input type="text" placeholder="Фамилия">
+                <input type="text" placeholder="Отчество">
+                <input type="tel" placeholder="Номер телефона">
+                <input type="email" placeholder="E-mail">
+                <div class="password-holder">
+                    <input type="password" id="first" placeholder="Придумайте пароль" class="password">
+                    <button type="button" class="view on" onclick=switchViewFirst(this)></button>
+                </div>
+                <div class="password-holder">
+                    <input type="password" id="second" placeholder="Повторите пароль">
+                    <button type="button" class="view on" onclick=switchViewSecond(this)></button>
+                </div>
+                <p class="password-description">Пароль должен содержать от 6 символов</p>
+                <button class="register">Зарегистрироваться</button>
+            </div>
+
+            <div class="account">
+                <p class="is-have">Есть аккаунт?</p>
+                <button class="sign-in">войти</button>
+            </div>
+        </form>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
