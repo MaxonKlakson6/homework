@@ -6,7 +6,7 @@ const isNumber = (value) => {
     return typeof value === 'number';
 }
 
-const messegeNotString = 'Value should be string value';
+const messageNotString = 'Value should be string value';
 
 // task 1
 
@@ -14,26 +14,26 @@ const messegeNotString = 'Value should be string value';
 
 const arrowSayHello = (name) => {
 
-    if(isString(name)){
-        return messegeNotString;
+    if(!isString(name)){
+        return messageNotString;
     }
 
     const specialName = 'mark';
     const greating = name.toLowerCase() === specialName ? 'Hi' : 'Hello';
 
-    return greating + ', ' + name;
+    return `${greating}, ${name}!`;
 }
 
 const functionalSayHello = function(name){
 
-    if(isString(name)){
-        return messegeNotString;
+    if(!isString(name)){
+        return messageNotString;
     }
 
     const specialName = 'mark';
     const greating = name.toLowerCase() === specialName ? 'Hi' : 'Hello';
 
-    return greating + ', ' + name + '!';
+    return `${greating}, ${name}!`;
 }
 
 // -----------------------------------------------------------------------------------------------------------------------------
@@ -68,29 +68,27 @@ const functionalCalculateHypotenuse = function() {
 
 // -----------------------------------------------------------------------------------------------------------------------------
 const arrowFindSmallerValue = (firstValue, secondValue) => {
-    const sumValues = firstValue + secondValue;
 
-    if(sumValues === 'NaN' || !isNumber(sumValues)){
+    if(!isNumber(firstValue) || !isNumber(secondValue)){
         return "One of the arguments isn't number";
     }
     if (firstValue === secondValue){
         return 'arguments are equal';
     }
 
-    return firstValue > secondValue ? firstValue : secondValue;
+    return firstValue < secondValue ? firstValue : secondValue;
 }
 
 const functionalFindSmallerValue = function(firstValue, secondValue) {
-    const sumValues = firstValue + secondValue;
 
-    if(sumValues === 'NaN' || !isNumber(sumValues)){
+    if(!isNumber(firstValue) || !isNumber(secondValue)){
         return "One of the arguments isn't number";
     }
     if (firstValue === secondValue){
         return 'arguments are equal';
     }
 
-    return firstValue > secondValue ? firstValue : secondValue;
+    return firstValue < secondValue ? firstValue : secondValue;
 }
 
 // -----------------------------------------------------------------------------------------------------------------------------
@@ -120,15 +118,15 @@ const functionalIsEven = function(value){
 // -----------------------------------------------------------------------------------------------------------------------------
 
 const arrowDeleteChars = (str) => {
-    if(isString(str)){
-        return messegeNotString;
+    if(!isString(str)){
+        return messageNotString;
     }
     return str.slice(1, -1);
 }
 
 const functionalDeleteChars = function(str){
-    if(isString(str)){
-        return messegeNotString;
+    if(!isString(str)){
+        return messageNotString;
     }
     return str.slice(1, -1);
 }
@@ -143,19 +141,19 @@ const functionalDeleteChars = function(str){
 // -----------------------------------------------------------------------------------------------------------------------------
 
 const arrowMakeCapitalLetter = (str) => {
-    if(isString(str)){
-        return messegeNotString;
+    if(!isString(str)){
+        return messageNotString;
     }
-    const loweCaseStr = str.toLowerCase();
-    return loweCaseStr.charAt(0).toUpperCase() + loweCaseStr.slice(1);
+    const lowerCaseStr = str.toLowerCase();
+    return lowerCaseStr.charAt(0).toUpperCase() + lowerCaseStr.slice(1);
 }
 
 const functionalMakeCapitalLetter = function(str){
-    if(isString(str)){
-        return messegeNotString;
+    if(!isString(str)){
+        return messageNotString;
     }
-    const loweCaseStr = str.toLowerCase();
-    return loweCaseStr.charAt(0).toUpperCase() + loweCaseStr.slice(1);
+    const lowerCaseStr = str.toLowerCase();
+    return lowerCaseStr.charAt(0).toUpperCase() + lowerCaseStr.slice(1);
 }
 
 // -----------------------------------------------------------------------------------------------------------------------------
@@ -167,17 +165,10 @@ const functionalMakeCapitalLetter = function(str){
 
 // -----------------------------------------------------------------------------------------------------------------------------
 
-const isLetter = (char) => {
-    return typeof Number(char) === 'number' ? false : true; 
-}
 
 const arrowCheckLetterCase = (char) => {
-    if(isString(char)){
-        return messegeNotString;
-    }
-
-    if(!isLetter(char)){
-        return 'Это не буква';
+    if(!isString(char)){
+        return messageNotString;
     }
 
     if(char.length > 1){
@@ -188,12 +179,8 @@ const arrowCheckLetterCase = (char) => {
 }
 
 const functionalCheckLetterCase = function(char){
-    if(isString(char)){
-        return messegeNotString;
-    }
-
-    if(!isLetter(char)){
-        return 'Это не буква';
+    if(!isString(char)){
+        return messageNotString;
     }
 
     if(char.length > 1){
