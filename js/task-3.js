@@ -55,31 +55,10 @@ const findMaxArea3 = (figures) => {
 
 // task 3
 
-// const findCommonNumber = (numbersList) => {
-//   const numberCounter = {};
-//   let temp = 0;
-//   let result;
-
-//   numbersList.forEach((number) => {
-//     if (numberCounter[number]) {
-//       numberCounter[number] += 1;
-//     } else {
-//       numberCounter[number] = 1;
-//     }
-//   });
-
-//   Object.entries(numberCounter).forEach((number) => {
-//     if (temp < number[1]) {
-//       temp = number[1];
-//       result = number[0];
-//     }
-//   });
-
-//   return Number(result);
-// };
 const findCommonNumber = (numbersList) => {
   const numberCounter = {};
   let temp = 0;
+  let result;
 
   numbersList.forEach((number) => {
     if (numberCounter[number]) {
@@ -89,22 +68,16 @@ const findCommonNumber = (numbersList) => {
     }
   });
 
-  console.log(numberCounter);
-  const counterArray = Object.entries(numberCounter);
-
-  let result = counterArray[0];
-
-  counterArray.forEach((numberArray) => {
-    if (result[1] < numberArray[1]) {
-      result[1] = numberArray[1];
-      result = numberArray;
+  Object.entries(numberCounter).forEach((number) => {
+    if (temp < number[1]) {
+      temp = number[1];
+      result = number[0];
     }
   });
 
-  return Number(result[0]);
+  return Number(result);
 };
 
-console.log(findCommonNumber([1, 1, 1, 1, 1, 23, 4, 56, 7, 8, 989, 2, 41, 32]));
 // task 4
 
 const isEmpty = (value) => {
