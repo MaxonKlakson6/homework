@@ -56,22 +56,22 @@ const findMaxArea3 = (figures) => {
 // task 3
 
 const findCommonNumber = (numbersList) => {
-  const numberCounter = {};
   let temp = 0;
   let result;
 
-  numbersList.forEach((number) => {
-    if (numberCounter[number]) {
-      numberCounter[number] += 1;
+  const numberCounter = numbersList.reduce((accum, currentNumber) => {
+    if (accum[currentNumber]) {
+      accum[currentNumber] += 1;
     } else {
-      numberCounter[number] = 1;
+      accum[currentNumber] = 1;
     }
-  });
+    return accum;
+  }, {});
 
-  Object.entries(numberCounter).forEach((number) => {
-    if (temp < number[1]) {
-      temp = number[1];
-      result = number[0];
+  Object.entries(numberCounter).forEach(([key, value]) => {
+    if (temp < value) {
+      temp = value;
+      result = key;
     }
   });
 
@@ -81,13 +81,13 @@ const findCommonNumber = (numbersList) => {
 // task 4
 
 const isEmpty = (value) => {
-  return value[1] === undefined || value[1] === null;
+  return value === undefined || value === null;
 };
 
 const deleteEmptyFields = (object) => {
-  return Object.entries(object).reduce((accum, currentArray) => {
-    if (!isEmpty(currentArray)) {
-      accum[currentArray[0]] = currentArray[1];
+  return Object.entries(object).reduce((accum, [key, value]) => {
+    if (!isEmpty(value)) {
+      accum[key] = value;
     }
     return accum;
   }, {});
@@ -95,27 +95,37 @@ const deleteEmptyFields = (object) => {
 
 // task 5
 
-const onceMeetedNumber = (numbersList) => {
-  const numberCounter = {};
-  let result = -1;
+// const onceMeetedNumber = (numbersList) => {
+//   const numberCounter = {};
+//   let result = -1;
 
-  numbersList.forEach((number) => {
-    if (numberCounter[number]) {
-      numberCounter[number] += 1;
-    } else {
-      numberCounter[number] = 1;
-    }
-  });
+//   numbersList.forEach((number) => {
+//     if (numberCounter[number]) {
+//       numberCounter[number] += 1;
+//     } else {
+//       numberCounter[number] = 1;
+//     }
+//   });
 
-  const counterArray = Object.entries(numberCounter);
+//   const counterArray = Object.entries(numberCounter);
 
-  for (let i = 0; i < counterArray.length; i++) {
-    if (counterArray[i][1] === 1) {
-      return counterArray[i][0];
-    }
-  }
+//   for (let i = 0; i < counterArray.length; i++) {
+//     if (counterArray[i][1] === 1) {
+//       return counterArray[i][0];
+//     }
+//   }
 
-  return Number(result);
+//   return Number(result);
+// };
+
+const onceMeetedNumber = (numberList) => {
+  return numberList.reduce(
+    (accum, number, index, array) =>
+      array.indexOf(number) === array.lastIndexOf(number)
+        ? (accum = number)
+        : accum,
+    -1
+  );
 };
 
 // task 6
