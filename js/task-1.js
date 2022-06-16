@@ -8,7 +8,7 @@ const isNumber = (value) => {
 
 const messageNotString = 'Value should be string value';
 
-// comment
+// com
 
 // task 1
 
